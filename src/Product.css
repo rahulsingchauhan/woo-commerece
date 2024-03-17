@@ -1,18 +1,31 @@
+/* General Styles */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
-  z-index: -1;
+  padding: 65px 55px 55px 0px;
+ 
+  justify-content: space-around;
 }
 
-.menu,
+.menu-icon {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.category,
 .search,
 .language,
 .cart,
@@ -20,18 +33,42 @@
   padding: 10px;
 }
 
-.menu {
-  order: -1; /* Moves the hamburger menu to the beginning */
+.language i {
+  margin-left: 5px;
 }
 
-.hamburger {
-  cursor: pointer;
+.cart i,
+.login i {
+  margin-left: 5px;
 }
 
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  margin-top: 100px; /* Adjust this value based on your header height */
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+/* Product Card Styles */
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 20px; /* Adjust margin as needed */
 }
 
 .col-md-3 {

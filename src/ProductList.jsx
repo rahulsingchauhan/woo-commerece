@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Product.css";
+import Carousel from './Carousel';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -44,7 +45,7 @@ const ProductList = () => {
         </div>
         <div className="category">
           {/* Category dropdown */}
-          <label htmlFor="category">Select Category:</label>
+          <label htmlFor="category"></label>
           <select
             id="category"
             className="form-control"
@@ -81,7 +82,9 @@ const ProductList = () => {
           {/* Login */}
           <span><i className="fa-regular fa-user"></i></span>
         </div>
+        
       </div>
+      <Carousel/>
       <div className="row mt-4">
         {filteredProducts.map((product) => (
           <div key={product.id} className="col-md-3 mb-3">
